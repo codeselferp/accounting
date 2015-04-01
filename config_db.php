@@ -29,5 +29,14 @@ $db_connections = array (
     'dbname' => 'accounting',
     'tbpref' => '0_',
   ),
+      1 => 
+  array (
+    'name' => 'greenlight',
+    'host' => 'localhost',
+    'dbuser' => 'root',
+    'dbpassword' => '',
+    'dbname' => 'deverp',
+    'tbpref' => '0_',
+  ),
 );
 ?>

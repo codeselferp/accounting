@@ -370,11 +370,9 @@ class cart
 			$this->freight_cost = $freight_cost;
 	}
 
-	function add_to_cart($line_no, $stock_id, $qty, $price, $disc, $qty_done=0, $standard_cost=0, $description=null, $id=0, $src_no=0,
-		$src_id=0)
+	function add_to_cart($line_no, $category,$batch,$qty,$stock_id, $size)
 	{
-		$line = new line_details($stock_id, $qty, $price, $disc,
-			$qty_done,  $standard_cost, $description, $id, $src_no, $src_id);
+		$line = new line_details($category,$batch,$qty,$stock_id, $size);
 
 		if ($line->valid) {
 			$this->line_items[$line_no] = $line;
@@ -384,14 +382,14 @@ class cart
 		return 0;
 	}
 
-	function update_cart_item($line_no, $qty, $price, $disc, $description="")
+	function update_cart_item($line_no, $batch,$qty,$stock_id, $size)
 	{
-		if ($description != "")
-			$this->line_items[$line_no]->item_description = $description;
+		
+			$this->line_items[$line_no]->batch = $batch;
 		$this->line_items[$line_no]->quantity = $qty;
-		$this->line_items[$line_no]->qty_dispatched = $qty;
-		$this->line_items[$line_no]->price = $price;
-		$this->line_items[$line_no]->discount_percent = $disc;
+		$this->line_items[$line_no]->stock_id = $stock_id;
+		$this->line_items[$line_no]->size = $size;
+//		$this->line_items[$line_no]->discount_percent = $disc;
 	}
 
 	function update_add_cart_item_qty($line_no, $qty)
@@ -599,7 +597,7 @@ class line_details
 	var $src_id;
 	var $price;
 	var $discount_percent;
-	
+	var $category;
 	var $standard_cost;
 	var $descr_editable;
 
@@ -629,16 +627,17 @@ class line_details
 	var $qty_done;
 	var $qty_dispatched;
 	var $qty_old = 0;
+        var $batch;
+        var $size;
 
-
-	function line_details ($stock_id, $qty, $prc, $disc_percent,
-		$qty_done, $standard_cost, $description, $id=0, $src_no=0, $src_id=0)
+	function line_details ($category,$batch,$qty,$stock_id, $size)
 	{
 	/* Constructor function to add a new LineDetail object with passed params */
 
-		$this->id = $id;
-		$this->src_no = $src_no;
-		$this->src_id = $src_id;
+		$this->category = $category;
+		$this->batch = $batch;
+		$this->quantity = $qty;
+                $this->size = $size;
 		$item_row = get_item($stock_id);
 
 		if (!$item_row) 
@@ -654,6 +653,7 @@ class line_details
 		//$this->standard_cost = $item_row["material_cost"] + $item_row["labour_cost"] + $item_row["overhead_cost"];
 		$this->tax_type = $item_row["tax_type_id"];
 		$this->tax_type_name = $item_row["tax_type_name"];
+                
 		$this->stock_id = $stock_id;
 		$this->quantity = $qty;
 		$this->qty_dispatched = $qty;

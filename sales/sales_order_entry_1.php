@@ -17,6 +17,7 @@
 //	Entry Direct Invoice
 //
 
+
 $path_to_root = "..";
 $page_security = 'SA_SALESORDER';
 
@@ -67,8 +68,19 @@ if (isset($_GET['NewDelivery']) && is_numeric($_GET['NewDelivery'])) {
 } elseif (isset($_GET['NewInvoice']) && is_numeric($_GET['NewInvoice'])) {
 
 	$_SESSION['page_title'] = _($help_context = "Direct Sales Invoice");
-	create_cart(ST_SALESINVOICE, $_GET['NewInvoice']);
-
+		
+              
+		$_SESSION['Items'] =new Cart(ST_SALESINVOICE, $trans_no, true);
+                $cat=  (db_query("select * from ".TB_PREF."stock_category where  solar=1"));
+                display_error(db_num_rows($cat));
+                if(db_num_rows($cat)>0){
+                    while ($row = db_fetch($cat)) {
+                        add_to_cart($_SESSION['Items'], $row['description'],1, 2, 3);
+                    }
+                    
+                }
+		
+	
 } elseif (isset($_GET['ModifyOrderNumber']) && is_numeric($_GET['ModifyOrderNumber'])) {
 
 	$help_context = 'Modifying Sales Order';
@@ -629,32 +641,26 @@ function create_cart($type, $trans_no)
 
 	processing_start();
 
-	if (isset($_GET['NewQuoteToSalesOrder']))
-	{
-		$trans_no = $_GET['NewQuoteToSalesOrder'];
-		$doc = new Cart(ST_SALESQUOTE, $trans_no, true);
-		$doc->Comments = _("Sales Quotation") . " # " . $trans_no;
-		$_SESSION['Items'] = $doc;
-	}	
-	elseif($type != ST_SALESORDER && $type != ST_SALESQUOTE && $trans_no != 0) { // this is template
-
-		$doc = new Cart(ST_SALESORDER, array($trans_no));
-		$doc->trans_type = $type;
-		$doc->trans_no = 0;
-		$doc->document_date = new_doc_date();
-		if ($type == ST_SALESINVOICE) {
-			$doc->due_date = get_invoice_duedate($doc->payment, $doc->document_date);
-			$doc->pos = get_sales_point(user_pos());
-		} else
-			$doc->due_date = $doc->document_date;
-		$doc->reference = $Refs->get_next($doc->trans_type);
-		//$doc->Comments='';
-		foreach($doc->line_items as $line_no => $line) {
-			$doc->line_items[$line_no]->qty_done = 0;
-		}
-		$_SESSION['Items'] = $doc;
-	} else
-		$_SESSION['Items'] = new Cart($type, array($trans_no));
+	
+//	elseif($type != ST_SALESORDER && $type != ST_SALESQUOTE && $trans_no != 0) { // this is template
+//
+//		$doc = new Cart(ST_SALESORDER, array($trans_no));
+//		$doc->trans_type = $type;
+//		$doc->trans_no = 0;
+//		$doc->document_date = new_doc_date();
+//		if ($type == ST_SALESINVOICE) {
+//			$doc->due_date = get_invoice_duedate($doc->payment, $doc->document_date);
+//			$doc->pos = get_sales_point(user_pos());
+//		} else
+//			$doc->due_date = $doc->document_date;
+//		$doc->reference = $Refs->get_next($doc->trans_type);
+//		//$doc->Comments='';
+//		foreach($doc->line_items as $line_no => $line) {
+//			$doc->line_items[$line_no]->qty_done = 0;
+//		}
+//		$_SESSION['Items'] = $doc;
+//	} else
+//		$_SESSION['Items'] = new Cart($type, array($trans_no));
 	copy_from_cart();
 }
 

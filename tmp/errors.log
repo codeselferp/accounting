@@ -628,3 +628,31 @@
 [22-Mar-2015 13:06:51 Europe/Berlin] 0:admin:JsHttpRequest.php:470: mb_convert_encoding(): Illegal character encoding specified
 [22-Mar-2015 13:06:51 Europe/Berlin] 0:admin:JsHttpRequest.php:470: mb_convert_encoding(): Illegal character encoding specified
 [22-Mar-2015 13:06:51 Europe/Berlin] 0:admin:JsHttpRequest.php:470: mb_convert_encoding(): Illegal character encoding specified
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:session.inc:449: include_once(./company/1/installed_extensions.php): failed to open stream: No such file or directory
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:session.inc:449: include_once(): Failed opening './company/1/installed_extensions.php' for inclusion (include_path='.;C:\xampp\php\PEAR')
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:main.inc:67: fopen(./company/1/js_cache/JsHttpRequest.js): failed to open stream: No such file or directory
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:main.inc:67: fopen(./company/1/js_cache/behaviour.js): failed to open stream: No such file or directory
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:main.inc:67: fopen(./company/1/js_cache/utils.js): failed to open stream: No such file or directory
+[01-Apr-2015 18:57:55 Europe/Berlin] 1:admin:main.inc:67: fopen(./company/1/js_cache/inserts.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:session.inc:449: include_once(../company/1/installed_extensions.php): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:session.inc:449: include_once(): Failed opening '../company/1/installed_extensions.php' for inclusion (include_path='.;C:\xampp\php\PEAR')
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/date_picker.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/JsHttpRequest.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/behaviour.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:47 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/utils.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:01:48 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/inserts.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:48:10 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/JsHttpRequest.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:48:10 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/behaviour.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:48:10 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/utils.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:48:10 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/inserts.js): failed to open stream: No such file or directory
+[01-Apr-2015 19:48:10 Europe/Berlin] 1:admin:main.inc:67: fopen(../company/1/js_cache/login.js): failed to open stream: No such file or directory
+[01-Apr-2015 21:02:11 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:02:48 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:02:53 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:03:34 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:04:35 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:11:35 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:11:35 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[01-Apr-2015 21:12:09 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
+[01-Apr-2015 21:12:09 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
+[01-Apr-2015 21:12:27 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
