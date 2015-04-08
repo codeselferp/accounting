@@ -25,7 +25,7 @@ include_once($path_to_root . "/sales/includes/cart_class_1.inc");
 include_once($path_to_root . "/includes/session.inc");
 include_once($path_to_root . "/sales/includes/sales_ui.inc");
 include_once($path_to_root . "/sales/includes/ui/sales_order_ui_1.inc");
-include_once($path_to_root . "/sales/includes/sales_db.inc");
+include_once($path_to_root . "/sales/includes/solar_sales_db.inc");
 include_once($path_to_root . "/sales/includes/db/sales_types_db.inc");
 include_once($path_to_root . "/reporting/includes/reporting.inc");
 
