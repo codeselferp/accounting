@@ -507,7 +507,7 @@ function sales_order_item_controls(&$order, &$rowcounter, $line_no=-1)
 	}
 	else	// prepare new line
 	{
-		sales_items_list_cells(null,'stock_id', null, false, true, true);
+//		sales_items_list_cells(null,'stock_id', null, false, true, true);
 		if (list_updated('stock_id')) {
 			    $Ajax->activate('price');
 			    $Ajax->activate('units');
@@ -535,9 +535,9 @@ function sales_order_item_controls(&$order, &$rowcounter, $line_no=-1)
 
 	label_cell($units, '', 'units');
 
-	amount_cells(null, 'price');
+	hidden('price');
 
-	small_amount_cells(null, 'Disc', percent_format($_POST['Disc']), null, null, user_percent_dec());
+//	small_amount_cells(null, 'Disc', percent_format($_POST['Disc']), null, null, user_percent_dec());
 
 	$line_total = input_num('qty') * input_num('price') * (1 - input_num('Disc') / 100);
 

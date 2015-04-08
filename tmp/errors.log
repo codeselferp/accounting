@@ -656,3 +656,9 @@
 [01-Apr-2015 21:12:09 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
 [01-Apr-2015 21:12:09 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
 [01-Apr-2015 21:12:27 Europe/Berlin] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, string given
+[03-Apr-2015 19:17:06 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[03-Apr-2015 19:17:06 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[03-Apr-2015 19:17:11 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[03-Apr-2015 19:17:11 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[05-Apr-2015 19:31:02 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[05-Apr-2015 19:31:02 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
