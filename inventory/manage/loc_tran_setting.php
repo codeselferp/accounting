@@ -99,6 +99,7 @@ $k = 0; //row colour counter
 
 while ($myrow = db_fetch($result))
 {
+    
 
 	alt_table_row_color($k);
 
