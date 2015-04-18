@@ -50,7 +50,10 @@ class inventory_app extends application
 			"inventory/manage/wastage_location_setting.php?", 'SA_UOM', MENU_MAINTENANCE);
 		$this->add_rapp_function(2, _("&Reorder Levels"),
 			"inventory/reorder_level.php?", 'SA_REORDER', MENU_MAINTENANCE);
-
+                $this->add_rapp_function(2, _("&Location Transfer settings"),
+			"inventory/manage/loc_tran_setting.php?", 'SA_REORDER', MENU_MAINTENANCE);
+                
+                
 		$this->add_module(_("Pricing and Costs"));
 		$this->add_lapp_function(3, _("Sales &Pricing"),
 			"inventory/prices.php?", 'SA_SALESPRICE', MENU_MAINTENANCE);

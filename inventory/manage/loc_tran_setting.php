@@ -103,7 +103,7 @@ while ($myrow = db_fetch($result))
 	alt_table_row_color($k);
 
 	
-        $t=db_fetch(data_retrieve_condition('loc_type', array('type'), array('id'=>$myrow["type"])));
+        $t=db_fetch(data_retrieve_condition('loc_tran_settings', array('type'), array('id'=>$myrow["type"])));
         label_cell($t["type"]);
         $loc=db_fetch(data_retrieve_condition('locations', array('location_name'), array('loc_code'=>$myrow["location"])));
 	label_cell($loc["location_name"]);
