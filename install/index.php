@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -31,7 +31,7 @@ function subpage_title($txt)
 {
 	global $path_to_root;
 	
-	echo '<center><img src="'.$path_to_root.'/themes/default/images/logo_frontaccounting.png" width="250" height="50" alt="Logo" />
+	echo '<center><img src="'.$path_to_root.'/themes/default/images/logo_codeself.png" width="250" height="50" alt="Logo" />
 		</center>';
 
 	$page = @$_POST['Page'] ? $_POST['Page'] : 1;
@@ -390,7 +390,7 @@ start_form();
 			break;
 
 		case '6': // final screen
-			subpage_title(_('FrontAccounting ERP has been installed successsfully.'));
+			subpage_title(_('codeself ERP has been installed successsfully.'));
 			display_note(_('Please do not forget to remove install wizard folder.'));
 			session_unset();
 			session_destroy();

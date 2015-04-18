@@ -1,7 +1,7 @@
 # MySQL dump of database 'ACCOUNTING' on host 'localhost'
 # Backup Date and Time: 2015-03-22 12:54
-# Built by FrontAccounting 2.3.22
-# http://frontaccounting.com
+# Built by codeself 2.3.22
+# http://codeself.com
 # Company: CodeSelf
 # User: Administrator
 
@@ -1768,7 +1768,7 @@ INSERT INTO `0_sys_prefs` VALUES
 ('phone', 'setup.company', 'varchar', '30', '(222) 111.222.333'),
 ('fax', 'setup.company', 'varchar', '30', NULL),
 ('email', 'setup.company', 'varchar', '100', 'delta@delta.com'),
-('coy_logo', 'setup.company', 'varchar', '100', 'logo_frontaccounting.jpg'),
+('coy_logo', 'setup.company', 'varchar', '100', 'logo_codeself.jpg'),
 ('domicile', 'setup.company', 'varchar', '55', NULL),
 ('curr_default', 'setup.company', 'char', '3', 'USD'),
 ('use_dimension', 'setup.company', 'tinyint', '1', '1'),

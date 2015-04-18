@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -16,7 +16,7 @@ include_once($path_to_root. "/includes/hooks.inc");
 define('PKG_CACHE_PATH', $path_to_root.'/modules/_cache');
 define('PUBKEY_PATH', $path_to_root);
 //
-// FrontAccounting package class
+// codeself package class
 //
 class package extends gzip_file {
 	function package($filename, $basedir=null)

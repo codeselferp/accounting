@@ -1,4 +1,4 @@
-Extensions to FrontAccounting
+Extensions to codeself
 -----------------------------
 
 We have prepared for installation of Extensions. Like installed modules.

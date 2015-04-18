@@ -2022,7 +2022,7 @@ INSERT INTO `0_sys_prefs` VALUES('postal_address', 'setup.company', 'tinytext', 
 INSERT INTO `0_sys_prefs` VALUES('phone', 'setup.company', 'varchar', 30, '(222) 111.222.333');
 INSERT INTO `0_sys_prefs` VALUES('fax', 'setup.company', 'varchar', 30, '');
 INSERT INTO `0_sys_prefs` VALUES('email', 'setup.company', 'varchar', 100, 'delta@delta.com');
-INSERT INTO `0_sys_prefs` VALUES('coy_logo', 'setup.company', 'varchar', 100, 'logo_frontaccounting.jpg');
+INSERT INTO `0_sys_prefs` VALUES('coy_logo', 'setup.company', 'varchar', 100, 'logo_codeself.jpg');
 INSERT INTO `0_sys_prefs` VALUES('domicile', 'setup.company', 'varchar', 55, '');
 INSERT INTO `0_sys_prefs` VALUES('curr_default', 'setup.company', 'char', 3, 'USD');
 INSERT INTO `0_sys_prefs` VALUES('use_dimension', 'setup.company', 'tinyint', 1, '1');

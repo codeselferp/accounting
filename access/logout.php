@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -22,7 +22,7 @@ page_header(_("Logout"), true, false, '');
 
 echo "<table width='100%' border='0'>
   <tr>
-	<td align='center'><img src='$path_to_root/themes/default/images/logo_frontaccounting.png' alt='FrontAccounting' width='250' height='50' onload='fixPNG(this)' /></td>
+	<td align='center'><img src='$path_to_root/themes/default/images/logo_codeself.png' alt='codeself' width='250' height='50' onload='fixPNG(this)' /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>

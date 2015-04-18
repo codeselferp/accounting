@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: FrontAccounting Installer\n"
+"Project-Id-Version: codeself Installer\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2011-03-31 22:40+0100\n"
-"Last-Translator: Translation Team <info@frontaccounting.net>\n"
+"Last-Translator: Translation Team <info@codeself.net>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -227,8 +227,8 @@ msgid "Select Default Language:"
 msgstr "Seleziona la Lingua di default:"
 
 #: install/index.php:388
-msgid "FrontAccounting ERP has been installed successsfully."
-msgstr "FrontAccounting ERP è stato installato con successo."
+msgid "codeself ERP has been installed successsfully."
+msgstr "codeself ERP è stato installato con successo."
 
 #: install/index.php:389
 msgid "Please do not forget to remove install wizard folder."

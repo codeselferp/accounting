@@ -662,3 +662,48 @@
 [03-Apr-2015 19:17:11 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
 [05-Apr-2015 19:31:02 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
 [05-Apr-2015 19:31:02 UTC] 0:admin:connect_db.inc:114: mysql_num_rows() expects parameter 1 to be resource, boolean given
+[11-Apr-2015 10:01:19 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[11-Apr-2015 12:16:30 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[11-Apr-2015 12:30:10 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[11-Apr-2015 12:41:23 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[11-Apr-2015 14:28:25 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[11-Apr-2015 14:29:55 UTC] 0::logout.php:50: session_destroy(): Session object destruction failed
+[12-Apr-2015 03:48:25 UTC] Rounding error 0.01 encountered for trans_type:11,trans_no:5
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:43 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:50 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:17:54 UTC] 0:admin:connect_db.inc:98: mysql_fetch_array() expects parameter 1 to be resource, boolean given
+[18-Apr-2015 17:24:58 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:25:28 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:25:28 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:25:42 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:25:42 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:26:21 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:26:21 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:26:34 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:26:53 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:27:05 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:27:05 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:28:11 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:28:11 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:28:16 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:41:49 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()
+[18-Apr-2015 17:41:49 UTC] 0:admin:renderer.php:109: Only variables should be assigned by reference
+[18-Apr-2015 17:41:56 UTC] 0:admin:renderer.php:55: Invalid argument supplied for foreach()

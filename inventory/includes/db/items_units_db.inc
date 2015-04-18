@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -40,7 +40,14 @@ function get_item_unit($unit)
 
 	return db_fetch($result);
 }
+function get_wastageSettingLoc($type)
+{
+	$sql="SELECT * FROM ".TB_PREF."location_setting WHERE type=".db_escape($type);
 
+	$result = db_query($sql,"an unit of measure could not be retrieved");
+
+	return db_fetch($result);
+}
 function get_unit_descr($unit)
 {
 	$sql = "SELECT description FROM ".TB_PREF."item_units WHERE abbr=".db_escape($unit);
@@ -63,6 +70,12 @@ function get_all_item_units($all=false) {
 	if (!$all) $sql .= " WHERE !inactive";
 	$sql .= " ORDER BY name";
     return  db_query($sql, "could not get stock categories");
+}
+function get_all_location_set() {
+    $sql = "SELECT * FROM ".TB_PREF."location_setting";
+	
+	$sql .= " ORDER BY location";
+    return  db_query($sql, "could not get location setting");
 }
 // 2008-06-15. Added Joe Hunt to get a measure of unit by given stock_id
 function get_unit_dec($stock_id)

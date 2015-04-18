@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -10,7 +10,7 @@
     See the License here <http://www.gnu.org/licenses/gpl-3.0.html>.
 ***********************************************************************/
 //----------------------------------------------------------------------------------
-//	FrontAccounting global system names. They have to be stored separate from
+//	codeself global system names. They have to be stored separate from
 //	sys types defines to enable inclusion after every language change
 //	(which happens for multilanguage bulk reports)
 //

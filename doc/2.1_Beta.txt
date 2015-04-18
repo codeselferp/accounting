@@ -1,4 +1,4 @@
-News in FrontAccounting 2.1 Beta
+News in codeself 2.1 Beta
 --------------------------------
 
 Common

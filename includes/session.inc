@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-	Copyright (C) FrontAccounting, LLC.
+	Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL,
 	as published by the Free Software Foundation, either version 3
 	of the License, or (at your option) any later version.
@@ -361,7 +361,7 @@ include_once($path_to_root . "/includes/errors.inc");
 set_error_handler('error_handler' /*, errtypes */);
 
 include_once($path_to_root . "/includes/current_user.inc");
-include_once($path_to_root . "/frontaccounting.php");
+include_once($path_to_root . "/codeself.php");
 include_once($path_to_root . "/admin/db/security_db.inc");
 include_once($path_to_root . "/includes/lang/language.php");
 include_once($path_to_root . "/config_db.php");

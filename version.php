@@ -20,6 +20,6 @@ if (!isset($repo_auth))
 	$repo_auth = array(
 		 'login' => 'anonymous',
 		 'pass' => 'password',
-		 'host' => 'repo.frontaccounting.eu', // repo server address
+		 'host' => 'repo.codeself.eu', // repo server address
 		 'branch' => '2.3'	// Repository branch for current sources version
 );

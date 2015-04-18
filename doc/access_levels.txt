@@ -1,10 +1,10 @@
-			FrontAccounting access control system
+			codeself access control system
 			=====================================
 
-Since version 2.2 FrontAccounting has new, flexible access level control system.
+Since version 2.2 codeself has new, flexible access level control system.
 In contrast to previous system based on arrays stored in global config.php file, 
 the new system uses per company security_roles tables. This approach makes 
-FrontAccounting finally suitable for multicompany installation involving 
+codeself finally suitable for multicompany installation involving 
 various types of companies.
 
 1. Security schema
@@ -35,7 +35,7 @@ editor.
 2. Access Setup
 ---------------
 
-FrontAccounting since version 2.2 has role based access system. It means that 
+codeself since version 2.2 has role based access system. It means that 
 every user defined in a system has assigned role related to his position in 
 company. For any user only security areas which belong to user's role are 
 accesible. 
@@ -44,7 +44,7 @@ To grant access to any security area for any role administrator first have to
 make accessible also related area's security section. Switching security section 
 off disables access to all related security areas.
 
-Security roles predefined in FrontAccounting initial database can be customized
+Security roles predefined in codeself initial database can be customized
 or completely rewritten by administrator according to company internal security 
 policy. 
 
@@ -75,7 +75,7 @@ Otherwise information message is displayed and page/report generation is aborted
 4. Security extensions
 ----------------------
 
-FrontAccounting application accepts two forms of functionality additions: 
+codeself application accepts two forms of functionality additions: 
 extension modules and extension plugins. Both types of extensions can use 
 standard security areas/sections to control access to introduced functionality,
 or define its own security areas and/or sections. 

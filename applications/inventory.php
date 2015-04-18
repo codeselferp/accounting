@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL,
 	as published by the Free Software Foundation, either version 3
 	of the License, or (at your option) any later version.
@@ -18,6 +18,8 @@ class inventory_app extends application
 		$this->add_module(_("Transactions"));
 		$this->add_lapp_function(0, _("Inventory Location &Transfers"),
 			"inventory/transfers.php?NewTransfer=1", 'SA_LOCATIONTRANSFER', MENU_TRANSACTION);
+                $this->add_lapp_function(0, _("Wastage &Transfers"),
+			"inventory/wastage_transfers.php?NewTransfer=1", 'SA_LOCATIONTRANSFER', MENU_TRANSACTION);
 		$this->add_lapp_function(0, _("Inventory &Adjustments"),
 			"inventory/adjustments.php?NewAdjustment=1", 'SA_INVENTORYADJUSTMENT', MENU_TRANSACTION);
 
@@ -44,6 +46,8 @@ class inventory_app extends application
 			"inventory/manage/movement_types.php?", 'SA_INVENTORYMOVETYPE', MENU_MAINTENANCE);
 		$this->add_rapp_function(2, _("&Units of Measure"),
 			"inventory/manage/item_units.php?", 'SA_UOM', MENU_MAINTENANCE);
+                $this->add_rapp_function(2, _("Setting Wastage &Location"),
+			"inventory/manage/wastage_location_setting.php?", 'SA_UOM', MENU_MAINTENANCE);
 		$this->add_rapp_function(2, _("&Reorder Levels"),
 			"inventory/reorder_level.php?", 'SA_REORDER', MENU_MAINTENANCE);
 

@@ -1,6 +1,6 @@
-# Frontaccounting ERP Installer
-# Copyright (C) 2010 FrontAccounting LLC
-# This file is distributed under the same license as the FrontAccounting package.
+# codeself ERP Installer
+# Copyright (C) 2010 codeself LLC
+# This file is distributed under the same license as the codeself package.
 # Eko Prasetiyo, 2010.
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2011-03-31 19:39+0100\n"
-"Last-Translator: Translation Team <info@frontaccounting.net>\n"
+"Last-Translator: Translation Team <info@codeself.net>\n"
 "Language-Team: Indonesan <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -228,8 +228,8 @@ msgid "Select Default Language:"
 msgstr "Pilih bahasa default:"
 
 #: install/index.php:388
-msgid "FrontAccounting ERP has been installed successsfully."
-msgstr "FrontAccounting ERP telah diinstalasi dengan sukses."
+msgid "codeself ERP has been installed successsfully."
+msgstr "codeself ERP telah diinstalasi dengan sukses."
 
 #: install/index.php:389
 msgid "Please do not forget to remove install wizard folder."

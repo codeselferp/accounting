@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -10,7 +10,7 @@
     See the License here <http://www.gnu.org/licenses/gpl-3.0.html>.
 ***********************************************************************/
 //
-// FrontAccounting extension modules integration.
+// codeself extension modules integration.
 // This file is included in session.inc even before session is started,
 // and includes hooks.php connector files from all installed extensions.
 // To make hooks active install_hooks() have to be called after interface

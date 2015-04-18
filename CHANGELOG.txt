@@ -1,14 +1,14 @@
 /**
 * @version $Id$
-* @package FrontAccounting
-* @copyright (C) 2005 - 2011 FrontAccounting, LLC
+* @package codeself
+* @copyright (C) 2005 - 2011 codeself, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
-* FrontAccounting is Free Software
+* codeself is Free Software
 */
 
 1. Changelog
 ------------
-This is a changelog for FrontAccounting All releases.
+This is a changelog for codeself All releases.
 
 2014-09-29 16:04 +0200 Joe
 (3421) Changelog change
@@ -984,7 +984,7 @@ message when invalid date is entered.
  themes/default/renderer.php
 
 2013-03-15 19:55 +0100 Janusz Dobrowolski
-(3204) Merge branch 'branches/default' of hg::ssh://itronics@frontaccounting.hg.sourceforge.net/hgroot/frontaccounting/frontaccounting into sf.default
+(3204) Merge branch 'branches/default' of hg::ssh://itronics@codeself.hg.sourceforge.net/hgroot/codeself/codeself into sf.default
 
 2013-03-15 19:50 +0100 Janusz Dobrowolski
 (3203) Customer Payments: fixed allocatable transactions display on start of new customer payment.
@@ -1189,7 +1189,7 @@ message when invalid date is entered.
  sales/sales_order_entry.php
 
 2013-01-24 11:11 +0100 Joe Hunt
-(3159) New report, Inventory Movements, added to FrontAccounting core.
+(3159) New report, Inventory Movements, added to codeself core.
  reporting/rep307.php
  reporting/reports_main.php
 
@@ -3994,7 +3994,7 @@ Bad test code left over, cleaning up
  dimensions/includes/dimensions_ui.inc
  dimensions/inquiry/search_dimensions.php
  dimensions/view/view_dimension.php
- frontaccounting.php
+ codeself.php
  gl/accruals.php
  gl/bank_account_reconcile.php
  gl/bank_transfer.php
@@ -5784,7 +5784,7 @@ When printing reference numbers instead of internal numbers on documents it shou
  doc/extensions.txt
  doc/quick_entries.txt
  doc/recurrent_invoice.txt
- frontaccounting.php
+ codeself.php
  gl/bank_account_reconcile.php
  gl/bank_transfer.php
  gl/gl_bank.php
@@ -7491,14 +7491,14 @@ installations.
  applications/manufacturing.php
  applications/setup.php
  applications/suppliers.php
- company/0/images/logo_frontaccounting.png
+ company/0/images/logo_codeself.png
  config.php
  dimensions/dimension_entry.php
  dimensions/includes/dimensions_db.inc
  dimensions/includes/dimensions_ui.inc
  dimensions/inquiry/search_dimensions.php
  dimensions/view/view_dimension.php
- frontaccounting.php
+ codeself.php
  gl/bank_transfer.php
  gl/gl_bank.php
  gl/gl_budget.php
@@ -8698,8 +8698,8 @@ Bug [0000044]Standard Cost error on credit note
  company/0/images/103.jpg
  company/0/images/104.jpg
  company/0/images/index.php
- company/0/images/logo_frontaccounting.jpg
- company/0/images/logo_frontaccounting.png
+ company/0/images/logo_codeself.jpg
+ company/0/images/logo_codeself.png
  company/0/index.php
  company/0/js_cache/index.php
  company/0/pdf_files/index.php
@@ -8711,7 +8711,7 @@ Bug [0000044]Standard Cost error on credit note
  dimensions/includes/dimensions_ui.inc
  dimensions/inquiry/search_dimensions.php
  dimensions/view/view_dimension.php
- frontaccounting.php
+ codeself.php
  gl/bank_transfer.php
  gl/gl_bank.php
  gl/gl_budget.php
@@ -8998,7 +8998,7 @@ Bug [0000044]Standard Cost error on credit note
 (64) Format cleanup, small display fix in taxes/tax_type.php
  CHANGELOG.txt
  applications/application.php
- frontaccounting.php
+ codeself.php
  gl/includes/gl_db.inc
  gl/includes/gl_ui.inc
  index.php
@@ -9497,7 +9497,7 @@ Fixed bug no 1703895  Account numbers are varchars, need quotes
  dimensions/inquiry/search_dimensions.php
  dimensions/view/index.php
  dimensions/view/view_dimension.php
- frontaccounting.php
+ codeself.php
  gl/bank_transfer.php
  gl/gl_deposit.php
  gl/gl_journal.php
@@ -9801,8 +9801,8 @@ Fixed bug no 1703895  Account numbers are varchars, need quotes
  themes/cool/index.php
  themes/cool/renderer.php
  themes/default/default.css
- themes/default/images/logo_frontaccounting.jpg
- themes/default/images/logo_frontaccounting.png
+ themes/default/images/logo_codeself.jpg
+ themes/default/images/logo_codeself.png
  themes/default/images/spacer.png
  themes/default/index.php
  themes/default/login.css

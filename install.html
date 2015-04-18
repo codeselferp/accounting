@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>FrontAccounting</title></head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><title>codeself</title></head>
 <body>
 <div><strong><span style="font-size: 20pt;"><span style="color: rgb(204, 102, 0); font-style: italic;">Front</span>Accounting
 Installation</span></strong></div>
@@ -29,7 +29,7 @@ of <strong><em>session.auto_start</em></strong>
 can and should be set to 0. </li>
 <li>
 For security reasons both Register Globals and Magic Quotes php settings 
-should be set to Off. When FrontAccounting is used with www server running 
+should be set to Off. When codeself is used with www server running 
 php as Apache module, respective flags are set in .htaccess file. When your
 server uses CGI interface to PHP you should set 
 <strong><em>magic_quotes_gpc = 0</em></strong> and 
@@ -40,7 +40,7 @@ tables must be enabled in the MySQL server. These tables allow database
 transactions which are a critical component of the software. This is
 enabled by default in the newer versions of MySQL. If you need to
 enable it yourself, consult the MySQL manual. </li>
-<li>FrontAccounting is implemented and tested with MySQL.
+<li>codeself is implemented and tested with MySQL.
 Generally
 it should work with other databases, but this is not supported in any
 way at the moment. </li>
@@ -60,7 +60,7 @@ write down the database name for your account. At the same time look up
 the username and password for the database. You will need these
 informations during the wizard install. </li>
 <li>Enter <strong><em>your_url/account</em></strong>
-(or whatever directory you entered). This will run the install wizard if this is the first time you run FrontAccounting,
+(or whatever directory you entered). This will run the install wizard if this is the first time you run codeself,
 setup a drill company and optional populating with initial demo data. You can later
 on create your own real company. It is a good idea to get familiar with
 the system before starting your own company.&nbsp; </li>
@@ -71,7 +71,7 @@ directory for safety reasons. You don't need it any more.</li>
 <li>Pleae ensure that the folder <strong>/company/0</strong>
 on the server is <strong>writable</strong>. </li>
 <li>Open a browser and enter the URL for the web server
-directory where FrontAccounting is installed. </li>
+directory where codeself is installed. </li>
 <li>Enter the user name:&nbsp; '<strong>admin</strong>'
 </li>
 <li>Enter the password you created during install.
@@ -93,13 +93,13 @@ Setup tab
 and each link should be reviewed to enter appropriate data for the
 business. </li></ol><h2>Troubleshooting</h2>
 <ol>
-<li>If FrontAccounting is installed locally, you may have the <strong><em>session
+<li>If codeself is installed locally, you may have the <strong><em>session
 save path</em></strong> not set correctly. Normally this is
 set in your php.ini (for Windows). The entry is called <strong><em>session.save_path</em></strong>.
 Make sure this is set to a directory that actually exists. The default
 is set to /tmp, which may not be valid. </li>
-<li>If you are installing FrontAccounting onto a shared server,
-you may have to set the session save path within FrontAccounting. At
+<li>If you are installing codeself onto a shared server,
+you may have to set the session save path within codeself. At
 the top of&nbsp;
 /includes/session.inc you will find this line : </li>
 <li>Uncomment this line and set the path to a directory that

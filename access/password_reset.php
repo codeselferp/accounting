@@ -1,6 +1,6 @@
 <?php
 /**********************************************************************
-    Copyright (C) FrontAccounting, LLC.
+    Copyright (C) codeself, LLC.
 	Released under the terms of the GNU General Public License, GPL, 
 	as published by the Free Software Foundation, either version 3 
 	of the License, or (at your option) any later version.
@@ -53,7 +53,7 @@ function defaultCompany()
 	start_table(false, "class='login'");
 	start_row();
 	echo "<td align='center' colspan=2>";
-  echo "<a target='_blank' href='$power_url'><img src='$path_to_root/themes/$def_theme/images/logo_frontaccounting.png' alt='FrontAccounting' height='50' onload='fixPNG(this)' border='0' /></a>";
+  echo "<a target='_blank' href='$power_url'><img src='$path_to_root/themes/$def_theme/images/logo_codeself.png' alt='codeself' height='50' onload='fixPNG(this)' border='0' /></a>";
 	echo "</td>\n";
 	end_row();
 

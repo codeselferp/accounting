@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-07 20:46+0100\n"
 "PO-Revision-Date: 2013-01-17 11:34+0100\n"
-"Last-Translator: Translation Team <info@frontaccounting.net>\n"
+"Last-Translator: Translation Team <info@codeself.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -228,7 +228,7 @@ msgid "Select Default Language:"
 msgstr ""
 
 #: install/index.php:393
-msgid "FrontAccounting ERP has been installed successsfully."
+msgid "codeself ERP has been installed successsfully."
 msgstr ""
 
 #: install/index.php:394
