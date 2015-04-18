@@ -181,7 +181,19 @@ $pterm_types = array(
 	PTT_DAYS => _("After No. of Days"),
 	PTT_FOLLOWING => _("Day In Following Month")
 );
+//----------------------------------------------------------------------------------
+//Location Transfer Type
+//
 
+
+$loc_trans_type=array(
+        
+	WASTAGE => _("Wastage"),
+	RETURN_LOCATION => _("Return Location "),
+	MAIN => _("Main Branch"),
+        MAIN_REPAIRED=> _("Main Branch Repaired"),
+        SOLD => _("Sold")
+        );
 //----------------------------------------------------------------------------------
 // This month array is for use with the last 3 dateformats. 
 $tmonths = array("", _("Jan"),_("Feb"),_("Mar"),_("Apr"),_("May"),_("Jun"),_("Jul"),_("Aug"),_("Sep"),_("Oct"),_("Nov"),_("Dec"));

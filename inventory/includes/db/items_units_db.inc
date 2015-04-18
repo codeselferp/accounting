@@ -24,7 +24,21 @@ function write_item_unit($selected, $abbr, $description, $decimals)
 
 	db_query($sql,"an item unit could not be updated");
 }
+function write_loc_tran_settings($selected, $location, $type)
+{
+    if($selected!='')
+		$sql = "UPDATE ".TB_PREF."loc_tran_settings SET
+	 	location = ".db_escape($location).",
+	 	type = ".db_escape($type)."
+	 	
+        	WHERE id = ".db_escape($selected);
+    else
+		$sql = "INSERT INTO ".TB_PREF."loc_tran_settings
+			(location, type) VALUES( ".db_escape($location).",
+	  		".db_escape($type).")";
 
+	db_query($sql,"an item unit could not be updated");
+}
 function delete_item_unit($unit)
 {
 	$sql="DELETE FROM ".TB_PREF."item_units WHERE abbr=".db_escape($unit);
@@ -40,12 +54,12 @@ function get_item_unit($unit)
 
 	return db_fetch($result);
 }
-function get_wastageSettingLoc($type)
+function get_wastageSettingLoc($id)
 {
-	$sql="SELECT * FROM ".TB_PREF."location_setting WHERE type=".db_escape($type);
+	$sql="SELECT * FROM ".TB_PREF."loc_tran_settings WHERE id=".$id;
 
-	$result = db_query($sql,"an unit of measure could not be retrieved");
-
+	$result = db_query($sql,"an Location Transfer setup data could not be retrieved");
+//        display_error($sql);
 	return db_fetch($result);
 }
 function get_unit_descr($unit)
@@ -72,7 +86,7 @@ function get_all_item_units($all=false) {
     return  db_query($sql, "could not get stock categories");
 }
 function get_all_location_set() {
-    $sql = "SELECT * FROM ".TB_PREF."location_setting";
+    $sql = "SELECT * FROM ".TB_PREF."loc_tran_settings";
 	
 	$sql .= " ORDER BY location";
     return  db_query($sql, "could not get location setting");

@@ -13,7 +13,7 @@ $page_security = 'SA_UOM';
 $path_to_root = "../..";
 include($path_to_root . "/includes/session.inc");
 
-page(_($help_context = "Units of Measure"));
+page(_($help_context = "Location Transfer Settings"));
 
 include_once($path_to_root . "/includes/ui.inc");
 
@@ -28,31 +28,44 @@ if ($Mode=='ADD_ITEM' || $Mode=='UPDATE_ITEM')
 	//initialise no input errors assumed initially before we test
 	$input_error = 0;
 
-	if (strlen($_POST['abbr']) == 0)
+	if ($_POST['type']== 0)
 	{
 		$input_error = 1;
-		display_error(_("The unit of measure code cannot be empty."));
+		display_error(_("Must Be a Valid Type"));
 		set_focus('abbr');
 	}
-	if (strlen(db_escape($_POST['abbr']))>(20+2))
+        if ($_POST['location']== '')
 	{
 		$input_error = 1;
-		display_error(_("The unit of measure code is too long."));
+		display_error(_("Must Be a Valid Location"));
 		set_focus('abbr');
 	}
-	if (strlen($_POST['description']) == 0)
+        if($_POST['type']){
+	$count_loc=  db_num_rows(db_query("select * from ".TB_PREF."loc_tran_settings where type=".$_POST['type']));
+        
+        if($count_loc>0){
+        
+            $input_error = 1;
+		display_error(_("Type already Exist "));
+		set_focus('type');
+        }
+        }
+	if ($_POST['location'])
 	{
-		$input_error = 1;
-		display_error(_("The unit of measure description cannot be empty."));
+            $count=  db_num_rows(db_query("select * from ".TB_PREF."loc_tran_settings where loc_code=".db_escape($_POST['location'])));
+		if($count>0){
+             $input_error = 1;
+		display_error(_("Location already used by another type."));
 		set_focus('description');
+                }
 	}
 
 	if ($input_error !=1) {
-    	write_item_unit($selected_id, $_POST['abbr'], $_POST['description'], $_POST['decimals'] );
+    	write_loc_tran_settings($selected_id, $_POST['location'], $_POST['type'] );
 		if($selected_id != '')
-			display_notification(_('Selected unit has been updated'));
+			display_notification(_('Selected setup has been updated'));
 		else
-			display_notification(_('New unit has been added'));
+			display_notification(_('New setup for location has been added'));
 		$Mode = 'RESET';
 	}
 }
@@ -91,31 +104,31 @@ $result = get_all_location_set();
 
 start_form();
 start_table(TABLESTYLE, "width=40%");
-$th = array(_('Location Type'), _('Location'),"", "");
-inactive_control_column($th);
+$th = array(_('Location Type'), _('Location'),"");
+//inactive_control_column($th);
 
 table_header($th);
 $k = 0; //row colour counter
-
+Global $loc_trans_type;
 while ($myrow = db_fetch($result))
 {
     
 
 	alt_table_row_color($k);
 
-	
-        $t=db_fetch(data_retrieve_condition('loc_tran_settings', array('type'), array('id'=>$myrow["type"])));
-        label_cell($t["type"]);
+	$t=$myrow['type'];
+//       $t=db_fetch(data_retrieve_condition('loc_tran_settings', array('type'), array('id'=>$myrow["type"])));
+        label_cell($loc_trans_type[$t]);
         $loc=db_fetch(data_retrieve_condition('locations', array('location_name'), array('loc_code'=>$myrow["location"])));
 	label_cell($loc["location_name"]);
 	
 //	inactive_control_cell($id, $myrow["inactive"], 'item_units', 'abbr');
- 	edit_button_cell("Edit".$id, _("Edit"));
- 	delete_button_cell("Delete".$id, _("Delete"));
+ 	edit_button_cell("Edit".$myrow['id'], _("Edit"));
+// 	delete_button_cell("Delete".$id, _("Delete"));
 	end_row();
 }
 
-inactive_control_row($th);
+//inactive_control_row($th);
 end_table(1);
 
 //----------------------------------------------------------------------------------
@@ -124,18 +137,22 @@ start_table(TABLESTYLE2);
 
 if ($selected_id != '') 
 {
+    
  	if ($Mode == 'Edit') {
 		//editing an existing item category
-
+display_error($selected_id);
 		$myrow = get_wastageSettingLoc($selected_id);
 
-		$_POST['wastageLocation'] = $myrow["location"];
-		
+		$_POST['location'] = $myrow["location"];
+		$_POST['type'] = $myrow["type"];
 	}
-	hidden('selected_id', $myrow["abbr"]);
+	hidden('selected_id', $myrow["id"]);
 }
 
-locations_list_row(_("Wastage Location:"), 'wastageLocation', null);
+free_combo_list_cells('Type :', 'type', $_POST['type'], $loc_trans_type,array('select_submit'=>TRUE));
+$query=array(array('loc_code','location_name',"select loc_code,location_name from ".TB_PREF."locations where inactive=0"));
+combo_list_row("Location", 'location', $_POST['location'],"Select a Location",false,$query);
+//locations_list_row("Location :", 'loc_code', $_POST['loc_code'],true);
 
 end_table(1);
 

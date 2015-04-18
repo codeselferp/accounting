@@ -182,6 +182,16 @@ define('CL_EQUITY', 3);
 define('CL_INCOME', 4);
 define('CL_COGS', 5);
 define('CL_EXPENSE', 6);
+//-------------------------------------------------------------------------------------
+//      Location Transfer Type
+//
+
+define('WASTAGE', 1);
+define('RETURN_LOCATION', 2);
+define('MAIN', 3);
+define('MAIN_REPAIRED', 4);
+define('SOLD', 5);
+
 
 function get_class_type_convert($ctype)
 {
