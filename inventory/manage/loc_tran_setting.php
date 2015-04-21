@@ -223,8 +223,8 @@ if($id==1){
 }else{
 free_combo_list_cells('Type :', 'type', $_POST['type'], $loc_trans_type,array('select_submit'=>TRUE));
 }
-dimensions_list_row("Dimension", "dimension_id", $_POST['dimension_id'],null,null,null,null,true);
-global  $Ajax;
+//dimensions_list_row("Dimension:", "dimension_id", $_POST['dimension_id'],null,null,null,null,true);
+
 
 //$Ajax->activate('_page_body');
 //if($_POST['type']==MAIN_REPAIRED){
@@ -234,9 +234,9 @@ global  $Ajax;
 //combo_list_row("Location", 'location', $_POST['location'],"Select a Location",false,$query);
 //
 //}elseif($_POST['type']==RETURN_LOCATION ||$_POST['type']==WASTAGE || $_POST['type']==SOLD){
-    div_start('loc');
+  
     
-    
+
     
 if($id!=1){
     
@@ -253,7 +253,7 @@ text_row_ex(_("Telephone No:"), 'phone', 32, 30);
 text_row_ex(_("Secondary Phone Number:"), 'phone2', 32, 30);
 text_row_ex(_("Facsimile No:"), 'fax', 32, 30);
 email_row_ex(_("E-mail:"), 'email', 30);
-    div_end();
+
 //}else{
 //
 //$query=array(array('loc_code','location_name',"select loc_code,location_name from ".TB_PREF."locations where inactive=0 AND type=1 AND dimension=".$_POST['dimension_id']));

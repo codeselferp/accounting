@@ -222,6 +222,39 @@ $opts = array(		// default options
 		}
 		db_free_result($result);
 	}
+        function free_combo_list_cells($label, $name, $selected_id, $items, $options, $search_icon = false)
+{
+    //<option value="$key">$value</option>
+    //$items=array($key=>$value)
+    
+    /*
+     $options= array(		// default options
+	'spec_option'=>false, 	// option text or false
+	'spec_id' => 0,		// option id
+	c, //submit on select: true/false
+	'async' => true,	// select update via ajax (true) vs _page_body reload
+	'default' => '', // default value when $_POST is not set
+	'multi'=>false,	// multiple select
+		// search box parameters
+	'height' => false,	// number of lines in select box
+	'sel_hint' => null,
+	'disabled' => false
+);
+     */
+	if ($label != null)
+		echo "<td>$label</td>\n";
+	echo "<td>";
+        echo array_selector($name, $selected_id, $items, $options);
+	echo "$search_icon</td>\n";
+}
+
+function free_combo_list_row($label, $name, $selected_id, $items, $options=false, $search_icon = false)
+{
+	echo "<tr><td class='label'>$label</td>";
+	free_combo_list_cells(null, $name, $selected_id, $items, $options,$search_icon);
+        
+	echo "</tr>\n";
+}
 
 	// Prepend special option.
 	if ($spec_option !== false) { // if special option used - add it

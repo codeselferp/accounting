@@ -927,3 +927,7 @@
 [19-Apr-2015 19:24:33 UTC] 0:admin:ui_input.inc:544: Missing argument 5 for text_row(), called in C:\xampp\htdocs\accounting\inventory\manage\loc_tran_setting.php on line 243 and defined
 [21-Apr-2015 16:28:19 UTC] 0:admin:ui_lists.inc:600: implode(): Invalid arguments passed
 [21-Apr-2015 16:28:19 UTC] 0:admin:ui_lists.inc:600: implode(): Invalid arguments passed
+[21-Apr-2015 17:55:14 UTC] 0:admin:ui_input.inc:544: Missing argument 4 for text_row(), called in C:\xampp\htdocs\accounting\inventory\manage\loc_tran_setting.php on line 243 and defined
+[21-Apr-2015 17:55:14 UTC] 0:admin:ui_input.inc:544: Missing argument 5 for text_row(), called in C:\xampp\htdocs\accounting\inventory\manage\loc_tran_setting.php on line 243 and defined
+[21-Apr-2015 17:56:34 UTC] 0:admin:ui_input.inc:544: Missing argument 4 for text_row(), called in C:\xampp\htdocs\accounting\inventory\manage\loc_tran_setting.php on line 243 and defined
+[21-Apr-2015 17:56:34 UTC] 0:admin:ui_input.inc:544: Missing argument 5 for text_row(), called in C:\xampp\htdocs\accounting\inventory\manage\loc_tran_setting.php on line 243 and defined
