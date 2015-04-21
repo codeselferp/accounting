@@ -9,12 +9,24 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
     See the License here <http://www.gnu.org/licenses/gpl-3.0.html>.
 ***********************************************************************/
-function add_item_location($loc_code, $location_name, $delivery_address, $phone, $phone2, $fax, $email, $contact)
-{
-	$sql = "INSERT INTO ".TB_PREF."locations (loc_code, location_name, delivery_address, phone, phone2, fax, email, contact)
+function add_item_location($loc_code, $location_name, $delivery_address, $phone, $phone2, $fax, $email, $contact, $dimension)
+{   
+        begin_transaction();
+        
+	$sql = "INSERT INTO ".TB_PREF."locations (loc_code, location_name, delivery_address, phone, phone2, fax, email, contact, dimension, type)
 		VALUES (".db_escape($loc_code).", ".db_escape($location_name).", ".db_escape($delivery_address).", "
 			.db_escape($phone).", ".db_escape($phone2).", ".db_escape($fax).", ".db_escape($email).", "
-			.db_escape($contact).")";
+			.db_escape($contact).", ".db_escape($dimension).", 1)";
+
+	db_query($sql,"a location could not be added");
+        
+        $loc_code_repair=$loc_code."_rp";
+        $location_name_repair=$location_name."_repair";
+        
+        $sql = "INSERT INTO ".TB_PREF."locations (loc_code, location_name, delivery_address, phone, phone2, fax, email, contact, dimension, type)
+		VALUES (".db_escape($loc_code_repair).", ".db_escape($location_name_repair).", ".db_escape($delivery_address).", "
+			.db_escape($phone).", ".db_escape($phone2).", ".db_escape($fax).", ".db_escape($email).", "
+			.db_escape($contact).", ".db_escape($dimension).", 0)";
 
 	db_query($sql,"a location could not be added");
 
@@ -23,20 +35,37 @@ function add_item_location($loc_code, $location_name, $delivery_address, $phone,
 		SELECT ".db_escape($loc_code).", ".TB_PREF."stock_master.stock_id, 0 FROM ".TB_PREF."stock_master";
 
 	db_query($sql,"a location could not be added");
+    
+        commit_transaction();
 }
 
 //------------------------------------------------------------------------------------
 
-function update_item_location($loc_code, $location_name, $delivery_address, $phone, $phone2, $fax, $email, $contact)
+function update_item_location($loc_code, $location_name, $delivery_address, $phone, $phone2, $fax, $email, $contact, $dimension)
 
-{
-    $sql = "UPDATE ".TB_PREF."locations SET location_name=".db_escape($location_name).",
-    	delivery_address=".db_escape($delivery_address).",
-    	phone=".db_escape($phone).", phone2=".db_escape($phone2).", fax=".db_escape($fax).",
-    	email=".db_escape($email).", contact=".db_escape($contact)."
-    	WHERE loc_code = ".db_escape($loc_code);
+{   
+        begin_transaction();
+    
+        $sql = "UPDATE ".TB_PREF."locations SET location_name=".db_escape($location_name).",
+            delivery_address=".db_escape($delivery_address).",
+            phone=".db_escape($phone).", phone2=".db_escape($phone2).", fax=".db_escape($fax).",
+            email=".db_escape($email).", contact=".db_escape($contact).", dimension=".db_escape($dimension).", type=1
+            WHERE loc_code = ".db_escape($loc_code);
 
 	db_query($sql,"a location could not be updated");
+        
+        $loc_code_repair=$loc_code."_rp";
+        $location_name_repair=$location_name."_repair";
+        
+        $sql = "UPDATE ".TB_PREF."locations SET location_name=".db_escape($location_name_repair).",
+            delivery_address=".db_escape($delivery_address).",
+            phone=".db_escape($phone).", phone2=".db_escape($phone2).", fax=".db_escape($fax).",
+            email=".db_escape($email).", contact=".db_escape($contact).", dimension=".db_escape($dimension).", type=0   
+            WHERE loc_code = ".db_escape($loc_code_repair);
+
+	db_query($sql,"a location could not be updated");
+        
+        commit_transaction();
 }
 
 //------------------------------------------------------------------------------------
@@ -65,8 +94,8 @@ function get_item_location($item_location)
 
 function get_item_locations($show_inactive)
 {
-	$sql = "SELECT * FROM ".TB_PREF."locations";
-	if (!$show_inactive) $sql .= " WHERE !inactive";
+	$sql = "SELECT * FROM ".TB_PREF."locations WHERE type=1";
+	if (!$show_inactive) $sql .= " AND !inactive";
 	return db_query($sql, "could not query locations");;
 }
 

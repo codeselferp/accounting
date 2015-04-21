@@ -190,7 +190,7 @@ $loc_trans_type=array(
         
 	WASTAGE => _("Wastage"),
 	RETURN_LOCATION => _("Return Location "),
-	MAIN => _("Main Branch"),
+	MAIN_LOC => _("Main Branch"),
         MAIN_REPAIRED=> _("Main Branch Repaired"),
         SOLD => _("Sold")
         );

@@ -24,7 +24,7 @@ function write_item_unit($selected, $abbr, $description, $decimals)
 
 	db_query($sql,"an item unit could not be updated");
 }
-function write_loc_tran_settings($selected, $location, $type)
+function write_loc_tran_settings($selected, $location, $type,$dim)
 {
     if($selected!='')
 		$sql = "UPDATE ".TB_PREF."loc_tran_settings SET
@@ -34,8 +34,8 @@ function write_loc_tran_settings($selected, $location, $type)
         	WHERE id = ".db_escape($selected);
     else
 		$sql = "INSERT INTO ".TB_PREF."loc_tran_settings
-			(location, type) VALUES( ".db_escape($location).",
-	  		".db_escape($type).")";
+			(location, type,dimension) VALUES( ".db_escape($location).",
+	  		".db_escape($type).",".db_escape($_POST['dimension_id']).")";
 
 	db_query($sql,"an item unit could not be updated");
 }
@@ -85,9 +85,10 @@ function get_all_item_units($all=false) {
 	$sql .= " ORDER BY name";
     return  db_query($sql, "could not get stock categories");
 }
-function get_all_location_set() {
-    $sql = "SELECT * FROM ".TB_PREF."loc_tran_settings";
-	
+function get_all_location_set($dim) {
+    $sql = "SELECT * FROM ".TB_PREF."loc_tran_settings ";
+	if($dim>0)
+            $sql.=" WHERE  dimension=".$dim;
 	$sql .= " ORDER BY location";
     return  db_query($sql, "could not get location setting");
 }

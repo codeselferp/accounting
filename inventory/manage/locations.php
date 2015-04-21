@@ -36,7 +36,7 @@ if ($Mode=='ADD_ITEM' || $Mode=='UPDATE_ITEM')
 	if ((strlen(db_escape($_POST['loc_code'])) > 7) || empty($_POST['loc_code'])) //check length after conversion
 	{
 		$input_error = 1;
-		display_error( _("The location code must be five characters or less long (including converted special chars)."));
+		display_error( _("The location code must be three characters or less long (including converted special chars)."));
 		set_focus('loc_code');
 	} 
 	elseif (strlen($_POST['location_name']) == 0) 
@@ -52,7 +52,7 @@ if ($Mode=='ADD_ITEM' || $Mode=='UPDATE_ITEM')
     	{
     
     		update_item_location($selected_id, $_POST['location_name'], $_POST['delivery_address'],
-    			$_POST['phone'], $_POST['phone2'], $_POST['fax'], $_POST['email'], $_POST['contact']);	
+    			$_POST['phone'], $_POST['phone2'], $_POST['fax'], $_POST['email'], $_POST['contact'],$_POST['dimension']);	
 			display_notification(_('Selected location has been updated'));
     	} 
     	else 
@@ -61,7 +61,7 @@ if ($Mode=='ADD_ITEM' || $Mode=='UPDATE_ITEM')
     	/*selected_id is null cos no item selected on first time round so must be adding a	record must be submitting new entries in the new Location form */
     	
     		add_item_location($_POST['loc_code'], $_POST['location_name'], $_POST['delivery_address'], 
-    		 	$_POST['phone'], $_POST['phone2'], $_POST['fax'], $_POST['email'], $_POST['contact']);
+    		 	$_POST['phone'], $_POST['phone2'], $_POST['fax'], $_POST['email'], $_POST['contact'],$_POST['dimension']);
 			display_notification(_('New location has been added'));
     	}
 		
@@ -143,7 +143,7 @@ $result = get_item_locations(check_value('show_inactive'));
 
 start_form();
 start_table(TABLESTYLE);
-$th = array(_("Location Code"), _("Location Name"), _("Address"), _("Phone"), _("Secondary Phone"), "", "");
+$th = array(_("Location Code"), _("Location Name"), _("Address"), _("Phone"), _("Secondary Phone"), _("Dimension"), "", "");
 inactive_control_column($th);
 table_header($th);
 $k = 0; //row colour counter
@@ -152,11 +152,15 @@ while ($myrow = db_fetch($result))
 
 	alt_table_row_color($k);
 	
+        $sql1="select * from ".TB_PREF."dimensions where id=".$myrow["dimension"];
+        $myrow1=  db_fetch(db_query($sql1));
+        
 	label_cell($myrow["loc_code"]);
 	label_cell($myrow["location_name"]);
 	label_cell($myrow["delivery_address"]);
 	label_cell($myrow["phone"]);
 	label_cell($myrow["phone2"]);
+        label_cell($myrow1['name']);
 	inactive_control_cell($myrow["loc_code"], $myrow["inactive"], 'locations', 'loc_code');
  	edit_button_cell("Edit".$myrow["loc_code"], _("Edit"));
  	delete_button_cell("Delete".$myrow["loc_code"], _("Delete"));
@@ -186,6 +190,7 @@ if ($selected_id != -1)
 		$_POST['phone2'] = $myrow["phone2"];
 		$_POST['fax'] = $myrow["fax"];
 		$_POST['email'] = $myrow["email"];
+                $_POST['dimension'] = $myrow["dimension"];
 	}
 	hidden("selected_id", $selected_id);
 	hidden("loc_code");
@@ -205,6 +210,7 @@ text_row_ex(_("Telephone No:"), 'phone', 32, 30);
 text_row_ex(_("Secondary Phone Number:"), 'phone2', 32, 30);
 text_row_ex(_("Facsimile No:"), 'fax', 32, 30);
 email_row_ex(_("E-mail:"), 'email', 30);
+dimensions_list_row("Dimension : ", 'dimension', $_POST['dimension'], true, "Select", $showclosed, $showtype, $submit_on_change);
 
 end_table(1);
 submit_add_or_update_center($selected_id == -1, '', 'both');

@@ -188,7 +188,7 @@ define('CL_EXPENSE', 6);
 
 define('WASTAGE', 1);
 define('RETURN_LOCATION', 2);
-define('MAIN', 3);
+define('MAIN_LOC', 3);
 define('MAIN_REPAIRED', 4);
 define('SOLD', 5);
 
